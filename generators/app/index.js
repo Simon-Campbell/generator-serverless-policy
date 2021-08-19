@@ -116,7 +116,7 @@ const buildPolicy = ({ name, account, stage, region }) => {
       {
         Effect: 'Allow',
         Action: 'sqs:*',
-        Resource: [`arn:aws:sqs:*:${account}:${name}-${stage}-${region}`]
+        Resource: [`arn:aws:sqs:${region}:${account}:${name}-${stage}-*`]
       },
       {
         Effect: 'Allow',
